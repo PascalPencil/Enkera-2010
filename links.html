@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+	<head>
+		<style>
+		@font-face {
+			font-family: 'GothamThinRegular';
+			src: url('gothamthin.eot');
+			src: local('Gotham Thin'), local('Gotham-Thin'), url('gothamthin.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'GothamMediumRegular';
+			src: url('gothammedium.eot');
+			src: local('Gotham Medium'), local('Gotham-Medium'), url('gothammedium.ttf') format('truetype');
+		}
+		body, html {
+			background-image: url(images/containerbg.jpg);
+			background-repeat: repeat;
+			margin: 0px;
+			line-height: 20px;
+			text-shadow: #ddbe88 0 2px 0;
+			font-family: GothamMediumRegular;
+			color: black;
+		}
+		
+		a{
+			color: #000000;
+			text-decoration: none;
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px; /* Ugh, Firefox. */
+			border-bottom: 1px solid #ffffff;
+			-webkit-transition: background .25s linear, color .25s linear;
+			-moz-transition: background .25s linear, color .25s linear; /* Firefox 3.7 */
+			background-color: #ffffff;
+			line-height: 10px;
+			margin-left: -3px;
+			margin-right: -3px;
+			padding: 4px;
+		}
+		
+		a:hover{
+			background: #ff3000;
+			border-bottom: 1px solid #ffffff;
+			color: #ffffff;
+			text-shadow: #000000 0 2px 0;
+		}
+		
+		a:active{
+			border-bottom: 1px solid #FFF;
+			background-color: #bcd4dd;
+			outline: none;
+		}
+		
+		:focus{
+			-moz-outline-style: none;
+		}
+		</style>
+	</head>
+	<body>
+				<p>I work with <a class="org" href="http://www.noastudios.com">Noa Studios</a></p>
+	</body>
+</html>

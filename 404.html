@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Space Invaders</title>
+<script type="text/javascript" src="js/jquery.js"></script> 
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link rel="SHORTCUT ICON" href="favicon.ico" type="image/x-icon" /> 
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/canvas_invaders.js" type="text/javascript"></script>
+<script src="js/Renderer.js" type="text/javascript"></script>
+<script src="js/player.js" type="text/javascript"></script>
+<script src="js/enemies.js" type="text/javascript"></script>
+<script src="js/projectile.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function () {
+		$('img').hide();//hide all the images on the page
+	});
+
+	var i = 0;//initialize
+	var int=0;//Internet Explorer Fix
+	$(window).bind("load", function() {//The load event will only fire if the entire page or document is fully loaded
+		var int = setInterval("doThis(i)",500);//500 is the fade in speed in milliseconds
+	});
+
+	function doThis() {
+		var images = $('img').length;//count the number of images on the page
+		if (i >= images) {// Loop the images
+			clearInterval(int);//When it reaches the last image the loop ends
+		}
+		$('img:hidden').eq(0).fadeIn(500);//fades in the hidden images one by one
+		i++;//add 1 to the count
+	}
+</script>
+</head>
+
+<body>
+<div id="container">
+<div id="balk"></div>
+	<div id="logo"><a href="index.html"><img src="images/spaceinvaders.png" width="200" height="105" alt="Home" /></a></div>
+	<div id="nicelink">
+	<div id="header"></div>
+	<div id="invaders">
+  		<div id="game_bezel">
+  			<div id="game_container">
+  				<canvas id="background-canvas"></canvas>
+  				<div id="hud">
+  					<span class="score">Score <span id="player_score"></span></span>
+  				</div>
+  				<canvas id="invaders-canvas"></canvas>
+  			</div>
+  		</div>
+   	</div>
+	<div id="smallfooter">
+	<div id="copyright">
+		<p>Copyright <span class="copyright">&copy;</span> 2010 <a href="index.html" title="Home">Pascal Verstegen</a>. All Rights Reserved. Version 0.7 / <a href="credits/index.html" title="Credits">Credits</a> / 
+		<a href="http://validator.w3.org/check?uri=referer" title="Valid XHTML">XHTML</a> / 
+		<a href="http://jigsaw.w3.org/css-validator/check/referer/" title="Valid CSS">CSS</a></p>
+	</div>
+	</div>
+</div></div>
+</body>
+</html>
